@@ -3,7 +3,16 @@
 # For useful gitignore templates see: https://github.com/github/gitignore
 
 # Salesforce cache
+.sf/
 .sfdx/
+.localdevserver/
+deploy-options.json
+
+# LWC VSCode autocomplete
+**/lwc/jsconfig.json
+
+# LWC Jest coverage reports
+coverage/
 
 # Logs
 logs
@@ -27,4 +36,10 @@ ehthumbs.db
 [Dd]esktop.ini
 $RECYCLE.BIN/
 
-.vscode
+# Local environment variables
+.env
+
+# Python Salesforce Functions
+**/__pycache__/
+**/.venv/
+**/venv/

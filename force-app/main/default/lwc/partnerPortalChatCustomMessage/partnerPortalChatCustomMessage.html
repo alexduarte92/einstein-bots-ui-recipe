@@ -1,0 +1,8 @@
+<template>
+    <div class={_messageStyle}>
+        <template lwc:if={_shouldRenderDefaultOutput}>
+            {_message}
+        </template>
+        <c-live-agent-image-handler raw-message={_message} user-type={_userType} ondisabledefaultoutput={handleDisableDefaultOutput}></c-live-agent-image-handler>
+    </div>
+</template>

@@ -25,13 +25,16 @@ export default class ChatMessageDefaultUI extends BaseChatMessage {
             return;
         }
         const messageTypePrefixPosition = SUPPORTED_MESSAGE_PREFIX.indexOf(this.messageContent.value.split(':')[0]);
+        console.log(messageTypePrefixPosition);
         if (messageTypePrefixPosition > -1) {
             this.messageType = SUPPORTED_MESSAGE_PREFIX[messageTypePrefixPosition];
         }
         const contentValue = (this.messageContent.value.split(this.messageType + ':').length === 1) ? this.messageContent.value : this.messageContent.value.split(this.messageType + ':')[1];
-        Promise.all([
-            loadStyle(this, chatMessageStyle + '/style.css')
-        ]);
+        // Promise.all([
+        //     loadStyle(this, chatMessageStyle + '/style.css')
+        // ]);
+        console.log(contentValue);
+        console.log(this.messageType);
         if (this.isPlainText) {
             this.content = contentValue;
         } else if (this.isYoutube) {
